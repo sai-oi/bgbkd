@@ -7,7 +7,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
 [![SAI-OI](https://img.shields.io/badge/SAI--OI-ROIS-22d3ee.svg)](#)
 
-> *Conception & direction: Mene · Formulation: Claude*
+> *Conception & direction: Anderson Ngelale · Formulation: Claude*
 
 ---
 
