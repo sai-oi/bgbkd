@@ -1,0 +1,14 @@
+{
+  "chemistry":            "NMC622/graphite",
+  "format":               "21700",
+  "R0_mohm":              18.0,
+  "Rinf_mohm":            85.0,
+  "theta0_deg":          -28.5,
+  "theta_plating_deg":   -41.2,
+  "W0":                   1.02,
+  "Winf":                 1.85,
+  "alpha_prior_mean":     0.32,
+  "alpha_prior_std":      0.04,
+  "temperature_ref_C":   25.0,
+  "notes": "NMC622/graphite 21700 — reference values from Schindler et al. 2016, Illig et al. 2012. ARC-calibrated endpoints for plating onset detection."
+}

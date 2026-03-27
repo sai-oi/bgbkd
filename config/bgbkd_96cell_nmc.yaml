@@ -1,0 +1,61 @@
+# config/bgbkd_96cell_nmc.yaml
+# BGBKD configuration — 96-cell NMC/graphite 21700 series pack
+# SAI-OI / ROIS · koopman.bgbkd
+# Conception & direction: Mene · Formulation: Claude
+
+pack:
+  n_cells:          96
+  n_modules:        12
+  cells_per_module: 8
+  chemistry:        "NMC622/graphite"
+  format:           "21700"
+  topology_file:    "data/pack_topology/A_pack_96cell.npy"
+  edges_file:       "data/pack_topology/edges_96cell.json"
+
+eis:
+  calibration_file:  "data/eis_calibration/nmc_21700_calibration.json"
+  alpha_prior_file:  "data/eis_calibration/alpha_prior_96cell.npy"
+  sample_rate_hz:    1           # EIS acquisition rate (Hz)
+  frequencies:
+    high:  1000                  # Hz — R_SEI channel
+    mid:   100                   # Hz — plating precursor
+    low:   0.01                  # Hz — transport deviation
+  channel_weights:
+    w_SEI:   0.25
+    w_theta: 0.55
+    w_W:     0.20
+  sigmoid_beta: 8.0
+
+edge_observable:
+  kappa:     0.8                 # impedance gradient coupling gain Γ
+  Z_ref:     0.3                 # reference impedance scale
+  gamma_T:   0.04                # thermal sensitivity coefficient γ_T
+  gamma_R:   0.025               # resistance redistribution coefficient γ_R
+  dT_ref_C:  10.0                # reference thermal gradient (°C)
+
+edmd:
+  lam:               1.0e-4     # Tikhonov regularisation λ
+  window:            60          # rolling window (EIS snapshots)
+  update_interval_s: 10          # seconds between K re-fits
+  lambda_forget:     1.0         # 1.0 = no forgetting; 0.85 = fast adaptation
+
+adaptive_alpha:
+  eta_i:         0.03            # per-cell α gradient step
+  eta_ij:        0.02            # per-edge α gradient step
+  delta:         0.015           # finite-difference step
+  DRT_threshold: 0.15            # γ_DRT: DRT plating peak crossing threshold
+  DRT_mu:        1.5             # Ω amplifier
+  alpha_min:     0.10
+  alpha_max:     0.75
+
+fragility:
+  phi_max: 0.05                  # normalisation for ψ_i
+  gamma:   0.40                  # cascade score weight in Ψ_sys
+
+scal:
+  threshold: 0.40                # SCAL alert Θ (Constitutional Mandate)
+
+pack_adjacency:
+  lambda_e:    0.60              # electrical weight in A_pack
+  lambda_th:   0.40              # thermal weight in A_pack
+  A_threshold: 0.05              # minimum edge weight to include in |E|

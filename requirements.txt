@@ -1,0 +1,15 @@
+# BGBKD — core requirements
+numpy>=1.24
+scipy>=1.11
+pandas>=2.0
+pyyaml>=6.0
+scikit-learn>=1.3
+
+# Optional: DRT computation (improves plating arc detection)
+# impedance>=1.4.2
+
+# Optional: BQ40Z80 I2C hardware
+# smbus2
+
+# Testing
+pytest>=7.4
