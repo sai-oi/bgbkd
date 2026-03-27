@@ -271,4 +271,4 @@ For NMC/graphite cells, reference values are available from the published EIS li
 
 MIT. See [LICENSE](LICENSE).
 
-*SAI-OI / ROIS · koopman.bgbkd*
+*[SAI-OI / ROIS](https://saicommand.com) · koopman.bgbkd*
