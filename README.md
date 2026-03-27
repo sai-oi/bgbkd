@@ -5,9 +5,9 @@
 [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
-[![SAI-OI](https://img.shields.io/badge/SAI--OI-ROIS-22d3ee.svg)](#)
+[![SAI-OI](https://saicommand.com)](#)
 
-> *Conception & direction: Mene · Formulation: Claude*
+> *Conception & direction: Anderson Ngelale · Formulation: Claude*
 
 ---
 
@@ -263,6 +263,7 @@ For NMC/graphite cells, reference values are available from the published EIS li
 | [sai-oi/gbkd](https://github.com/sai-oi/gbkd) | Power grid | AUC 0.9948, IEEE 39-bus |
 | [sai-oi/fgbkd](https://github.com/sai-oi/fgbkd) | Financial markets | 5-day lead on March 2020 crash |
 | [sai-oi/wgbkd](https://github.com/sai-oi/wgbkd) | Wind farms | Stall cascade pathway forecasting |
+| [sai-oi/scgbkd_loop](https://github.com/sai-oi/scgbkd_loop) | Supply chain | A Self-Recovery, Self-Optimizing, and Cyber-Physical Supply-Chain Framework |
 
 ---
 
